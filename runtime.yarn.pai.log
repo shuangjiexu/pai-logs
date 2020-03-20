@@ -1,0 +1,617 @@
+Log Type: runtime.yarn.pai.log
+
+Log Upload Time: Fri Mar 20 04:43:22 +0000 2020
+
+Log Length: 43758
+
+++ PS4='+[\t] '
+++[04:42:19] trap exit_handler EXIT
+++[04:42:19] alive_dir=tmp/pai-root/alive
+++[04:42:19] mkdir -p tmp/pai-root/alive
+++[04:42:19] gpu_id=
+++[04:42:19] nvidia_devices=
+++[04:42:19] nvidia_devices+='--device=/dev/nvidiactl --device=/dev/nvidia-uvm'
+++[04:42:19] /bin/true
++++[04:42:19] perl -e 'printf "%b",1'
+++[04:42:19] touch tmp/pai-root/alive/yarn_container_e10_1584673981652_0005_01_000002
+++[04:42:19] sleep 20
+++[04:42:19] gpu_bitmap=1
+++[04:42:19] (( i=0,j=0 ))
+++[04:42:19] (( i<1 ))
+++[04:42:19] '[' 1 -gt 0 ']'
+++[04:42:19] gpu_id+=0,
+++[04:42:19] nvidia_devices+=' --device=/dev/nvidia0'
+++[04:42:19] (( i++,j--  ))
+++[04:42:19] (( i<1 ))
++++[04:42:19] echo 0,
++++[04:42:19] sed 's/,$//g'
+++[04:42:19] gpu_id=0
+++[04:42:19] printf '%s %s\n%s\n\n' '[INFO]' GPU_ID 0
+++[04:42:19] printf '%s %s\n%s\n\n' '[INFO]' NVIDIA_DEVICES '--device=/dev/nvidiactl --device=/dev/nvidia-uvm --device=/dev/nvidia0'
+++[04:42:19] nvidia_flags=
++++[04:42:19] docker info --format '{{json .DefaultRuntime}}'
+++[04:42:19] default_runtime='"runc"'
+++[04:42:19] '[' '"runc"' = '"nvidia"' ']'
+++[04:42:19] nvidia_flags+='--runtime=runc --env NVIDIA_VISIBLE_DEVICES=void --device=/dev/nvidiactl --device=/dev/nvidia-uvm --device=/dev/nvidia0'
+++[04:42:19] infiniband_flags=
+++[04:42:19] [[ -d /dev/infiniband ]]
+++[04:42:19] ssh_config_file=tmp/pai-root/ssh_config
+++[04:42:19] mkdir -p tmp/pai-root/ssh_config
+++[04:42:19] ENV_LIST=env.list
+++[04:42:19] echo APP_ID=application_1584673981652_0005
+++[04:42:19] echo FRAMEWORK_NAME=admin~just-test_3f34372a
+++[04:42:19] echo HADOOP_USER_NAME=admin
+++[04:42:19] echo PAI_TASK_INDEX=0
+++[04:42:19] echo PAI_CONTAINER_HOST_IP=10.3.1.2
+++[04:42:19] echo 'PAI_CONTAINER_HOST_PORT_LIST=ssh:8325;http:8326;'
+++[04:42:19] echo PAI_CONTAINER_ID=container_e10_1584673981652_0005_01_000002
+++[04:42:19] PAI_TEMP=admin~just-test_3f34372a
+++[04:42:19] echo PAI_JOB_NAME=admin~just-test_3f34372a
+++[04:42:19] PAI_TEMP=admin
+++[04:42:19] echo PAI_USER_NAME=admin
+++[04:42:19] PAI_TEMP=hdfs://10.3.1.12:9000
+++[04:42:19] echo PAI_DEFAULT_FS_URI=hdfs://10.3.1.12:9000
+++[04:42:19] PAI_TEMP=1
+++[04:42:19] echo PAI_TASK_ROLE_COUNT=1
+++[04:42:19] PAI_TEMP=taskrole
+++[04:42:19] echo PAI_TASK_ROLE_LIST=taskrole
+++[04:42:19] PAI_TEMP=1,4,8192,512
+++[04:42:19] echo PAI_RESOURCE=1,4,8192,512
+++[04:42:19] PAI_TEMP=1
+++[04:42:19] echo PAI_MIN_FAILED_TASK_COUNT_taskrole=1
+++[04:42:19] PAI_TEMP=
+++[04:42:19] echo PAI_MIN_SUCCEEDED_TASK_COUNT_taskrole=
+++[04:42:19] PAI_TEMP=taskrole
+++[04:42:19] echo PAI_CURRENT_TASK_ROLE_NAME=taskrole
+++[04:42:19] echo PAI_CURRENT_TASK_ROLE_CURRENT_TASK_INDEX=0
+++[04:42:19] port_list=(${CONTAINER_PORTS//;/ })
+++[04:42:19] for ports in '"${port_list[@]}"'
++++[04:42:19] cut -f 1 -d:
+++[04:42:19] port_label=ssh
++++[04:42:19] cut -f 2 -d:
+++[04:42:19] export PAI_CONTAINER_HOST_ssh_PORT_LIST=8325
+++[04:42:19] PAI_CONTAINER_HOST_ssh_PORT_LIST=8325
++++[04:42:19] cut -f 2 -d:
+++[04:42:19] echo PAI_CONTAINER_HOST_ssh_PORT_LIST=8325
+++[04:42:19] for ports in '"${port_list[@]}"'
++++[04:42:19] cut -f 1 -d:
+++[04:42:19] port_label=http
++++[04:42:19] cut -f 2 -d:
+++[04:42:19] export PAI_CONTAINER_HOST_http_PORT_LIST=8326
+++[04:42:19] PAI_CONTAINER_HOST_http_PORT_LIST=8326
++++[04:42:19] cut -f 2 -d:
+++[04:42:19] echo PAI_CONTAINER_HOST_http_PORT_LIST=8326
++++[04:42:19] cut -f 1 -d,
+++[04:42:19] echo PAI_CONTAINER_HOST_PORT=8326
++++[04:42:19] cut -f 1 -d,
+++[04:42:19] echo PAI_CONTAINER_SSH_PORT=8325
+++[04:42:19] get_host_list env.list
+++[04:42:19] delay_time=20
+++[04:42:19] info_source=webhdfs
+++[04:42:19] true
+++[04:42:19] [[ webhdfs = \w\e\b\h\d\f\s ]]
++++[04:42:19] curl -s -L -H 'Accept: application/json' 'http://10.3.1.12:5070/webhdfs/v1/Launcher/admin~just-test_3f34372a/FrameworkInfo.json?op=OPEN'
++++[04:42:19] jq -r .aggregatedFrameworkStatus.aggregatedTaskRoleStatuses
+++[04:42:19] taskrole_statuses='{}'
+++[04:42:19] jq -re '.[].taskStatuses.taskStatusArray[].containerIp'
++++[04:42:19] echo '{}'
+++[04:42:19] '[' 4 -eq 0 ']'
+++[04:42:19] printf '%s %s\n' '[WARNING]' 'Failed to request info from webhdfs, sleep 20 s ...'
+++[04:42:19] sleep 20s
+++[04:42:39] '[' -f tmp/pai-root/alive/docker_container_e10_1584673981652_0005_01_000002 ']'
+++[04:42:39] /bin/true
+++[04:42:39] touch tmp/pai-root/alive/yarn_container_e10_1584673981652_0005_01_000002
+++[04:42:39] sleep 20
+++[04:42:39] [[ 20 -ge 300 ]]
+++[04:42:39] [[ webhdfs = \w\e\b\h\d\f\s ]]
+++[04:42:39] delay_time=40
+++[04:42:39] true
+++[04:42:39] [[ webhdfs = \w\e\b\h\d\f\s ]]
++++[04:42:39] curl -s -L -H 'Accept: application/json' 'http://10.3.1.12:5070/webhdfs/v1/Launcher/admin~just-test_3f34372a/FrameworkInfo.json?op=OPEN'
++++[04:42:39] jq -r .aggregatedFrameworkStatus.aggregatedTaskRoleStatuses
+++[04:42:39] taskrole_statuses='{
+  "taskrole": {
+    "taskRoleStatus": {
+      "taskRoleName": "taskrole",
+      "taskRoleRolloutStatus": {
+        "overallRolloutServiceVersion": null,
+        "overallRolloutStatus": "UNKNOWN",
+        "overallRolloutStartTimestamp": null,
+        "overallRolloutEndTimestamp": null,
+        "currentRolloutScaleUnit": null,
+        "currentRolloutTaskIndexes": null,
+        "currentRolloutStatus": "UNKNOWN",
+        "currentRolloutStartTimestamp": null,
+        "currentRolloutEndTimestamp": null
+      },
+      "frameworkVersion": 10
+    },
+    "taskStatuses": {
+      "taskRoleName": "taskrole",
+      "taskStatusArray": [
+        {
+          "taskIndex": 0,
+          "taskRoleName": "taskrole",
+          "taskState": "CONTAINER_RUNNING",
+          "taskRetryPolicyState": {
+            "retriedCount": 0,
+            "succeededRetriedCount": 0,
+            "transientNormalRetriedCount": 0,
+            "transientConflictRetriedCount": 0,
+            "nonTransientRetriedCount": 0,
+            "unKnownRetriedCount": 0
+          },
+          "taskCreatedTimestamp": 1584679336674,
+          "taskCompletedTimestamp": null,
+          "taskServiceStatus": {
+            "serviceVersion": 0
+          },
+          "containerId": "container_e10_1584673981652_0005_01_000002",
+          "containerHost": "10.3.1.2",
+          "containerIp": "10.3.1.2",
+          "containerPorts": "ssh:8325;http:8326;",
+          "containerGpus": 1,
+          "containerLogHttpAddress": "http://10.3.1.2:8042/node/containerlogs/container_e10_1584673981652_0005_01_000002/admin/",
+          "containerConnectionLostCount": 0,
+          "containerIsDecommissioning": null,
+          "containerLaunchedTimestamp": 1584679339028,
+          "containerCompletedTimestamp": null,
+          "containerExitCode": null,
+          "containerExitDescription": null,
+          "containerExitDiagnostics": null,
+          "containerExitType": null
+        }
+      ],
+      "frameworkVersion": 10
+    }
+  }
+}'
+++[04:42:39] jq -re '.[].taskStatuses.taskStatusArray[].containerIp'
++++[04:42:39] echo '{' '"taskrole":' '{' '"taskRoleStatus":' '{' '"taskRoleName":' '"taskrole",' '"taskRoleRolloutStatus":' '{' '"overallRolloutServiceVersion":' null, '"overallRolloutStatus":' '"UNKNOWN",' '"overallRolloutStartTimestamp":' null, '"overallRolloutEndTimestamp":' null, '"currentRolloutScaleUnit":' null, '"currentRolloutTaskIndexes":' null, '"currentRolloutStatus":' '"UNKNOWN",' '"currentRolloutStartTimestamp":' null, '"currentRolloutEndTimestamp":' null '},' '"frameworkVersion":' 10 '},' '"taskStatuses":' '{' '"taskRoleName":' '"taskrole",' '"taskStatusArray":' '[' '{' '"taskIndex":' 0, '"taskRoleName":' '"taskrole",' '"taskState":' '"CONTAINER_RUNNING",' '"taskRetryPolicyState":' '{' '"retriedCount":' 0, '"succeededRetriedCount":' 0, '"transientNormalRetriedCount":' 0, '"transientConflictRetriedCount":' 0, '"nonTransientRetriedCount":' 0, '"unKnownRetriedCount":' 0 '},' '"taskCreatedTimestamp":' 1584679336674, '"taskCompletedTimestamp":' null, '"taskServiceStatus":' '{' '"serviceVersion":' 0 '},' '"containerId":' '"container_e10_1584673981652_0005_01_000002",' '"containerHost":' '"10.3.1.2",' '"containerIp":' '"10.3.1.2",' '"containerPorts":' '"ssh:8325;http:8326;",' '"containerGpus":' 1, '"containerLogHttpAddress":' '"http://10.3.1.2:8042/node/containerlogs/container_e10_1584673981652_0005_01_000002/admin/",' '"containerConnectionLostCount":' 0, '"containerIsDecommissioning":' null, '"containerLaunchedTimestamp":' 1584679339028, '"containerCompletedTimestamp":' null, '"containerExitCode":' null, '"containerExitDescription":' null, '"containerExitDiagnostics":' null, '"containerExitType":' null '}' '],' '"frameworkVersion":' 10 '}' '}' '}'
+++[04:42:39] '[' 0 -eq 0 ']'
++++[04:42:39] jq -r '.[].taskStatuses.taskStatusArray[].containerIp'
++++[04:42:39] grep -Ecv '([0-9]{1,3}.?){4}'
+++++[04:42:39] echo '{' '"taskrole":' '{' '"taskRoleStatus":' '{' '"taskRoleName":' '"taskrole",' '"taskRoleRolloutStatus":' '{' '"overallRolloutServiceVersion":' null, '"overallRolloutStatus":' '"UNKNOWN",' '"overallRolloutStartTimestamp":' null, '"overallRolloutEndTimestamp":' null, '"currentRolloutScaleUnit":' null, '"currentRolloutTaskIndexes":' null, '"currentRolloutStatus":' '"UNKNOWN",' '"currentRolloutStartTimestamp":' null, '"currentRolloutEndTimestamp":' null '},' '"frameworkVersion":' 10 '},' '"taskStatuses":' '{' '"taskRoleName":' '"taskrole",' '"taskStatusArray":' '[' '{' '"taskIndex":' 0, '"taskRoleName":' '"taskrole",' '"taskState":' '"CONTAINER_RUNNING",' '"taskRetryPolicyState":' '{' '"retriedCount":' 0, '"succeededRetriedCount":' 0, '"transientNormalRetriedCount":' 0, '"transientConflictRetriedCount":' 0, '"nonTransientRetriedCount":' 0, '"unKnownRetriedCount":' 0 '},' '"taskCreatedTimestamp":' 1584679336674, '"taskCompletedTimestamp":' null, '"taskServiceStatus":' '{' '"serviceVersion":' 0 '},' '"containerId":' '"container_e10_1584673981652_0005_01_000002",' '"containerHost":' '"10.3.1.2",' '"containerIp":' '"10.3.1.2",' '"containerPorts":' '"ssh:8325;http:8326;",' '"containerGpus":' 1, '"containerLogHttpAddress":' '"http://10.3.1.2:8042/node/containerlogs/container_e10_1584673981652_0005_01_000002/admin/",' '"containerConnectionLostCount":' 0, '"containerIsDecommissioning":' null, '"containerLaunchedTimestamp":' 1584679339028, '"containerCompletedTimestamp":' null, '"containerExitCode":' null, '"containerExitDescription":' null, '"containerExitDiagnostics":' null, '"containerExitType":' null '}' '],' '"frameworkVersion":' 10 '}' '}' '}'
+++[04:42:39] null_line=0
+++[04:42:39] '[' 0 -eq 0 ']'
+++[04:42:39] break
++++[04:42:39] jq -r '.|keys[]'
++++[04:42:39] echo '{' '"taskrole":' '{' '"taskRoleStatus":' '{' '"taskRoleName":' '"taskrole",' '"taskRoleRolloutStatus":' '{' '"overallRolloutServiceVersion":' null, '"overallRolloutStatus":' '"UNKNOWN",' '"overallRolloutStartTimestamp":' null, '"overallRolloutEndTimestamp":' null, '"currentRolloutScaleUnit":' null, '"currentRolloutTaskIndexes":' null, '"currentRolloutStatus":' '"UNKNOWN",' '"currentRolloutStartTimestamp":' null, '"currentRolloutEndTimestamp":' null '},' '"frameworkVersion":' 10 '},' '"taskStatuses":' '{' '"taskRoleName":' '"taskrole",' '"taskStatusArray":' '[' '{' '"taskIndex":' 0, '"taskRoleName":' '"taskrole",' '"taskState":' '"CONTAINER_RUNNING",' '"taskRetryPolicyState":' '{' '"retriedCount":' 0, '"succeededRetriedCount":' 0, '"transientNormalRetriedCount":' 0, '"transientConflictRetriedCount":' 0, '"nonTransientRetriedCount":' 0, '"unKnownRetriedCount":' 0 '},' '"taskCreatedTimestamp":' 1584679336674, '"taskCompletedTimestamp":' null, '"taskServiceStatus":' '{' '"serviceVersion":' 0 '},' '"containerId":' '"container_e10_1584673981652_0005_01_000002",' '"containerHost":' '"10.3.1.2",' '"containerIp":' '"10.3.1.2",' '"containerPorts":' '"ssh:8325;http:8326;",' '"containerGpus":' 1, '"containerLogHttpAddress":' '"http://10.3.1.2:8042/node/containerlogs/container_e10_1584673981652_0005_01_000002/admin/",' '"containerConnectionLostCount":' 0, '"containerIsDecommissioning":' null, '"containerLaunchedTimestamp":' 1584679339028, '"containerCompletedTimestamp":' null, '"containerExitCode":' null, '"containerExitDescription":' null, '"containerExitDiagnostics":' null, '"containerExitType":' null '}' '],' '"frameworkVersion":' 10 '}' '}' '}'
+++[04:42:39] for taskrole in '$(echo $taskrole_statuses |  jq -r ".|keys[]")'
+++[04:42:39] host_list=
+++[04:42:39] read container_ip
++++[04:42:39] jq -r '."taskrole".taskStatuses.taskStatusArray[] | .containerIp, .containerPorts, .taskIndex'
++++[04:42:39] echo '{' '"taskrole":' '{' '"taskRoleStatus":' '{' '"taskRoleName":' '"taskrole",' '"taskRoleRolloutStatus":' '{' '"overallRolloutServiceVersion":' null, '"overallRolloutStatus":' '"UNKNOWN",' '"overallRolloutStartTimestamp":' null, '"overallRolloutEndTimestamp":' null, '"currentRolloutScaleUnit":' null, '"currentRolloutTaskIndexes":' null, '"currentRolloutStatus":' '"UNKNOWN",' '"currentRolloutStartTimestamp":' null, '"currentRolloutEndTimestamp":' null '},' '"frameworkVersion":' 10 '},' '"taskStatuses":' '{' '"taskRoleName":' '"taskrole",' '"taskStatusArray":' '[' '{' '"taskIndex":' 0, '"taskRoleName":' '"taskrole",' '"taskState":' '"CONTAINER_RUNNING",' '"taskRetryPolicyState":' '{' '"retriedCount":' 0, '"succeededRetriedCount":' 0, '"transientNormalRetriedCount":' 0, '"transientConflictRetriedCount":' 0, '"nonTransientRetriedCount":' 0, '"unKnownRetriedCount":' 0 '},' '"taskCreatedTimestamp":' 1584679336674, '"taskCompletedTimestamp":' null, '"taskServiceStatus":' '{' '"serviceVersion":' 0 '},' '"containerId":' '"container_e10_1584673981652_0005_01_000002",' '"containerHost":' '"10.3.1.2",' '"containerIp":' '"10.3.1.2",' '"containerPorts":' '"ssh:8325;http:8326;",' '"containerGpus":' 1, '"containerLogHttpAddress":' '"http://10.3.1.2:8042/node/containerlogs/container_e10_1584673981652_0005_01_000002/admin/",' '"containerConnectionLostCount":' 0, '"containerIsDecommissioning":' null, '"containerLaunchedTimestamp":' 1584679339028, '"containerCompletedTimestamp":' null, '"containerExitCode":' null, '"containerExitDescription":' null, '"containerExitDiagnostics":' null, '"containerExitType":' null '}' '],' '"frameworkVersion":' 10 '}' '}' '}'
+++[04:42:39] read container_ports
+++[04:42:39] read task_index
+++[04:42:39] echo PAI_HOST_IP_taskrole_0=10.3.1.2
++++[04:42:39] echo 'ssh:8325;http:8326;'
++++[04:42:39] grep -o 'http:[^,;]*'
++++[04:42:39] cut -f 2 -d:
+++[04:42:39] host_list+=10.3.1.2:8326,
++++[04:42:39] echo 'ssh:8325;http:8326;'
++++[04:42:39] grep -o 'ssh:[^,;]*'
++++[04:42:39] cut -f 2 -d:
+++[04:42:39] ssh_port=8325
+++[04:42:39] printf '%s\n  %s\n  %s\n  %s\n  %s\n  %s\n  %s\n' 'Host taskrole-0' 'HostName 10.3.1.2' 'Port 8325' 'User root' 'StrictHostKeyChecking no' 'UserKnownHostsFile /dev/null' 'IdentityFile /root/.ssh/admin~just-test_3f34372a'
+++[04:42:39] IFS=';'
+++[04:42:39] read -r -a ports_arr
+++[04:42:39] for port in '${ports_arr[@]}'
+++[04:42:39] IFS=:
+++[04:42:39] read -r -a port_info
+++[04:42:39] [[ 2 -ge 2 ]]
+++[04:42:39] echo PAI_PORT_LIST_taskrole_0_ssh=8325
+++[04:42:39] echo PAI_taskrole_0_ssh_PORT=8325
+++[04:42:39] for port in '${ports_arr[@]}'
+++[04:42:39] IFS=:
+++[04:42:39] read -r -a port_info
+++[04:42:39] [[ 2 -ge 2 ]]
+++[04:42:39] echo PAI_PORT_LIST_taskrole_0_http=8326
+++[04:42:39] echo PAI_taskrole_0_http_PORT=8326
+++[04:42:39] read container_ip
++++[04:42:39] jq '."taskrole".taskStatuses.taskStatusArray | length'
++++[04:42:39] echo '{' '"taskrole":' '{' '"taskRoleStatus":' '{' '"taskRoleName":' '"taskrole",' '"taskRoleRolloutStatus":' '{' '"overallRolloutServiceVersion":' null, '"overallRolloutStatus":' '"UNKNOWN",' '"overallRolloutStartTimestamp":' null, '"overallRolloutEndTimestamp":' null, '"currentRolloutScaleUnit":' null, '"currentRolloutTaskIndexes":' null, '"currentRolloutStatus":' '"UNKNOWN",' '"currentRolloutStartTimestamp":' null, '"currentRolloutEndTimestamp":' null '},' '"frameworkVersion":' 10 '},' '"taskStatuses":' '{' '"taskRoleName":' '"taskrole",' '"taskStatusArray":' '[' '{' '"taskIndex":' 0, '"taskRoleName":' '"taskrole",' '"taskState":' '"CONTAINER_RUNNING",' '"taskRetryPolicyState":' '{' '"retriedCount":' 0, '"succeededRetriedCount":' 0, '"transientNormalRetriedCount":' 0, '"transientConflictRetriedCount":' 0, '"nonTransientRetriedCount":' 0, '"unKnownRetriedCount":' 0 '},' '"taskCreatedTimestamp":' 1584679336674, '"taskCompletedTimestamp":' null, '"taskServiceStatus":' '{' '"serviceVersion":' 0 '},' '"containerId":' '"container_e10_1584673981652_0005_01_000002",' '"containerHost":' '"10.3.1.2",' '"containerIp":' '"10.3.1.2",' '"containerPorts":' '"ssh:8325;http:8326;",' '"containerGpus":' 1, '"containerLogHttpAddress":' '"http://10.3.1.2:8042/node/containerlogs/container_e10_1584673981652_0005_01_000002/admin/",' '"containerConnectionLostCount":' 0, '"containerIsDecommissioning":' null, '"containerLaunchedTimestamp":' 1584679339028, '"containerCompletedTimestamp":' null, '"containerExitCode":' null, '"containerExitDescription":' null, '"containerExitDiagnostics":' null, '"containerExitType":' null '}' '],' '"frameworkVersion":' 10 '}' '}' '}'
+++[04:42:39] echo PAI_TASK_ROLE_TASK_COUNT_taskrole=1
++++[04:42:39] echo 10.3.1.2:8326,
++++[04:42:39] sed 's/,$//g'
+++[04:42:39] host_list=10.3.1.2:8326
+++[04:42:39] echo PAI_TASK_ROLE_taskrole_HOST_LIST=10.3.1.2:8326
+++[04:42:39] echo '#' Backward compatibility
+++[04:42:39] echo PAI_CURRENT_CONTAINER_IP=10.3.1.2
+++[04:42:39] echo PAI_TASK_ROLE_INDEX=0
+++[04:42:39] PAI_TEMP=admin
+++[04:42:39] echo PAI_USERNAME=admin
+++[04:42:39] PAI_TEMP=
+++[04:42:39] echo PAI_DATA_DIR=
+++[04:42:39] PAI_TEMP=
+++[04:42:39] echo PAI_OUTPUT_DIR=
+++[04:42:39] PAI_TEMP=
+++[04:42:39] echo PAI_CODE_DIR=
+++[04:42:39] PAI_TEMP=taskrole
+++[04:42:39] echo PAI_TASK_ROLE_NAME=taskrole
+++[04:42:39] PAI_TEMP=1
+++[04:42:39] echo PAI_TASK_ROLE_NUM=1
+++[04:42:39] PAI_TEMP=1
+++[04:42:39] echo PAI_CURRENT_TASK_ROLE_TASK_COUNT=1
+++[04:42:39] PAI_TEMP=4
+++[04:42:39] echo PAI_TASK_CPU_NUM=4
+++[04:42:39] PAI_TEMP=4
+++[04:42:39] echo PAI_CURRENT_TASK_ROLE_CPU_COUNT=4
+++[04:42:39] PAI_TEMP=8192
+++[04:42:39] echo PAI_TASK_MEM_MB=8192
+++[04:42:39] PAI_TEMP=8192
+++[04:42:39] echo PAI_CURRENT_TASK_ROLE_MEM_MB=8192
+++[04:42:39] PAI_TEMP=1
+++[04:42:39] echo PAI_TASK_GPU_NUM=1
+++[04:42:39] PAI_TEMP=1
+++[04:42:39] echo PAI_CURRENT_TASK_ROLE_GPU_COUNT=1
+++[04:42:39] PAI_TEMP=512
+++[04:42:39] echo PAI_CURRENT_TASK_ROLE_SHM_MB=512
+++[04:42:39] PAI_TEMP=1
+++[04:42:39] echo PAI_CURRENT_TASK_ROLE_MIN_FAILED_TASK_COUNT=1
+++[04:42:39] PAI_TEMP=
+++[04:42:39] echo PAI_CURRENT_TASK_ROLE_MIN_SUCCEEDED_TASK_COUNT=
+++[04:42:39] PAI_TEMP=1
+++[04:42:39] echo PAI_TASKS_NUM=1
+++[04:42:39] PAI_TEMP=1
+++[04:42:39] echo PAI_JOB_TASK_COUNT=1
+++[04:42:39] PAI_TEMP=1
+++[04:42:39] echo PAI_TASK_ROLES_NUM=1
+++[04:42:39] PAI_TEMP=1
+++[04:42:39] echo PAI_JOB_TASK_ROLE_COUNT=1
+++[04:42:39] PAI_TEMP=taskrole
+++[04:42:39] echo PAI_TASK_ROLE_LIST=taskrole
+++[04:42:39] PAI_TEMP=taskrole
+++[04:42:39] echo PAI_JOB_TASK_ROLE_LIST=taskrole
++++[04:42:39] cut -f 1 -d,
+++[04:42:39] echo PAI_CURRENT_CONTAINER_PORT=8326
++++[04:42:39] grep -v '^#' env.list
++++[04:42:39] xargs
+++[04:42:39] export APP_ID=application_1584673981652_0005 FRAMEWORK_NAME=admin~just-test_3f34372a HADOOP_USER_NAME=admin PAI_TASK_INDEX=0 PAI_CONTAINER_HOST_IP=10.3.1.2 'PAI_CONTAINER_HOST_PORT_LIST=ssh:8325;http:8326;' PAI_CONTAINER_ID=container_e10_1584673981652_0005_01_000002 PAI_JOB_NAME=admin~just-test_3f34372a PAI_USER_NAME=admin PAI_DEFAULT_FS_URI=hdfs://10.3.1.12:9000 PAI_TASK_ROLE_COUNT=1 PAI_TASK_ROLE_LIST=taskrole PAI_RESOURCE=1,4,8192,512 PAI_MIN_FAILED_TASK_COUNT_taskrole=1 PAI_MIN_SUCCEEDED_TASK_COUNT_taskrole= PAI_CURRENT_TASK_ROLE_NAME=taskrole PAI_CURRENT_TASK_ROLE_CURRENT_TASK_INDEX=0 PAI_CONTAINER_HOST_ssh_PORT_LIST=8325 PAI_CONTAINER_HOST_http_PORT_LIST=8326 PAI_CONTAINER_HOST_PORT=8326 PAI_CONTAINER_SSH_PORT=8325 PAI_HOST_IP_taskrole_0=10.3.1.2 PAI_PORT_LIST_taskrole_0_ssh=8325 PAI_taskrole_0_ssh_PORT=8325 PAI_PORT_LIST_taskrole_0_http=8326 PAI_taskrole_0_http_PORT=8326 PAI_TASK_ROLE_TASK_COUNT_taskrole=1 PAI_TASK_ROLE_taskrole_HOST_LIST=10.3.1.2:8326 PAI_CURRENT_CONTAINER_IP=10.3.1.2 PAI_TASK_ROLE_INDEX=0 PAI_USERNAME=admin PAI_DATA_DIR= PAI_OUTPUT_DIR= PAI_CODE_DIR= PAI_TASK_ROLE_NAME=taskrole PAI_TASK_ROLE_NUM=1 PAI_CURRENT_TASK_ROLE_TASK_COUNT=1 PAI_TASK_CPU_NUM=4 PAI_CURRENT_TASK_ROLE_CPU_COUNT=4 PAI_TASK_MEM_MB=8192 PAI_CURRENT_TASK_ROLE_MEM_MB=8192 PAI_TASK_GPU_NUM=1 PAI_CURRENT_TASK_ROLE_GPU_COUNT=1 PAI_CURRENT_TASK_ROLE_SHM_MB=512 PAI_CURRENT_TASK_ROLE_MIN_FAILED_TASK_COUNT=1 PAI_CURRENT_TASK_ROLE_MIN_SUCCEEDED_TASK_COUNT= PAI_TASKS_NUM=1 PAI_JOB_TASK_COUNT=1 PAI_TASK_ROLES_NUM=1 PAI_JOB_TASK_ROLE_COUNT=1 PAI_TASK_ROLE_LIST=taskrole PAI_JOB_TASK_ROLE_LIST=taskrole PAI_CURRENT_CONTAINER_PORT=8326
+++[04:42:39] APP_ID=application_1584673981652_0005
+++[04:42:39] FRAMEWORK_NAME=admin~just-test_3f34372a
+++[04:42:39] HADOOP_USER_NAME=admin
+++[04:42:39] PAI_TASK_INDEX=0
+++[04:42:39] PAI_CONTAINER_HOST_IP=10.3.1.2
+++[04:42:39] PAI_CONTAINER_HOST_PORT_LIST='ssh:8325;http:8326;'
+++[04:42:39] PAI_CONTAINER_ID=container_e10_1584673981652_0005_01_000002
+++[04:42:39] PAI_JOB_NAME=admin~just-test_3f34372a
+++[04:42:39] PAI_USER_NAME=admin
+++[04:42:39] PAI_DEFAULT_FS_URI=hdfs://10.3.1.12:9000
+++[04:42:39] PAI_TASK_ROLE_COUNT=1
+++[04:42:39] PAI_TASK_ROLE_LIST=taskrole
+++[04:42:39] PAI_RESOURCE=1,4,8192,512
+++[04:42:39] PAI_MIN_FAILED_TASK_COUNT_taskrole=1
+++[04:42:39] PAI_MIN_SUCCEEDED_TASK_COUNT_taskrole=
+++[04:42:39] PAI_CURRENT_TASK_ROLE_NAME=taskrole
+++[04:42:39] PAI_CURRENT_TASK_ROLE_CURRENT_TASK_INDEX=0
+++[04:42:39] PAI_CONTAINER_HOST_ssh_PORT_LIST=8325
+++[04:42:39] PAI_CONTAINER_HOST_http_PORT_LIST=8326
+++[04:42:39] PAI_CONTAINER_HOST_PORT=8326
+++[04:42:39] PAI_CONTAINER_SSH_PORT=8325
+++[04:42:39] PAI_HOST_IP_taskrole_0=10.3.1.2
+++[04:42:39] PAI_PORT_LIST_taskrole_0_ssh=8325
+++[04:42:39] PAI_taskrole_0_ssh_PORT=8325
+++[04:42:39] PAI_PORT_LIST_taskrole_0_http=8326
+++[04:42:39] PAI_taskrole_0_http_PORT=8326
+++[04:42:39] PAI_TASK_ROLE_TASK_COUNT_taskrole=1
+++[04:42:39] PAI_TASK_ROLE_taskrole_HOST_LIST=10.3.1.2:8326
+++[04:42:39] PAI_CURRENT_CONTAINER_IP=10.3.1.2
+++[04:42:39] PAI_TASK_ROLE_INDEX=0
+++[04:42:39] PAI_USERNAME=admin
+++[04:42:39] PAI_DATA_DIR=
+++[04:42:39] PAI_OUTPUT_DIR=
+++[04:42:39] PAI_CODE_DIR=
+++[04:42:39] PAI_TASK_ROLE_NAME=taskrole
+++[04:42:39] PAI_TASK_ROLE_NUM=1
+++[04:42:39] PAI_CURRENT_TASK_ROLE_TASK_COUNT=1
+++[04:42:39] PAI_TASK_CPU_NUM=4
+++[04:42:39] PAI_CURRENT_TASK_ROLE_CPU_COUNT=4
+++[04:42:39] PAI_TASK_MEM_MB=8192
+++[04:42:39] PAI_CURRENT_TASK_ROLE_MEM_MB=8192
+++[04:42:39] PAI_TASK_GPU_NUM=1
+++[04:42:39] PAI_CURRENT_TASK_ROLE_GPU_COUNT=1
+++[04:42:39] PAI_CURRENT_TASK_ROLE_SHM_MB=512
+++[04:42:39] PAI_CURRENT_TASK_ROLE_MIN_FAILED_TASK_COUNT=1
+++[04:42:39] PAI_CURRENT_TASK_ROLE_MIN_SUCCEEDED_TASK_COUNT=
+++[04:42:39] PAI_TASKS_NUM=1
+++[04:42:39] PAI_JOB_TASK_COUNT=1
+++[04:42:39] PAI_TASK_ROLES_NUM=1
+++[04:42:39] PAI_JOB_TASK_ROLE_COUNT=1
+++[04:42:39] PAI_TASK_ROLE_LIST=taskrole
+++[04:42:39] PAI_JOB_TASK_ROLE_LIST=taskrole
+++[04:42:39] PAI_CURRENT_CONTAINER_PORT=8326
+++[04:42:39] bootstrap_dir=tmp/pai-root/bootstrap
+++[04:42:39] mkdir -p tmp/pai-root/bootstrap
+++[04:42:39] hdfs dfs -get hdfs://10.3.1.12:9000/Container/admin/admin~just-test_3f34372a/DockerContainerScripts/taskrole.sh tmp/pai-root/bootstrap/docker_bootstrap.sh
+++[04:42:42] code_dir=tmp/pai-root/code
+++[04:42:42] mkdir -p tmp/pai-root/code
+++[04:42:42] [[ -n '' ]]
+++[04:42:42] log_dir=tmp/pai-root/log
+++[04:42:42] mkdir -p tmp/pai-root/log
+++[04:42:42] ln -s //var/lib/hadoopdata/nm-local-dir/usercache/admin/appcache/application_1584673981652_0005/container_e10_1584673981652_0005_01_000002/tmp/pai-root/log/runtime.docker.pai.error /var/lib/yarn/userlogs/application_1584673981652_0005/container_e10_1584673981652_0005_01_000002/runtime.docker.pai.error
+++[04:42:42] ln -s //var/lib/hadoopdata/nm-local-dir/usercache/admin/appcache/application_1584673981652_0005/container_e10_1584673981652_0005_01_000002/tmp/pai-root/log/runtime.docker.pai.log /var/lib/yarn/userlogs/application_1584673981652_0005/container_e10_1584673981652_0005_01_000002/runtime.docker.pai.log
+++[04:42:42] ln -s //var/lib/hadoopdata/nm-local-dir/usercache/admin/appcache/application_1584673981652_0005/container_e10_1584673981652_0005_01_000002/tmp/pai-root/log/user.pai.stderr /var/lib/yarn/userlogs/application_1584673981652_0005/container_e10_1584673981652_0005_01_000002/user.pai.stderr
+++[04:42:42] ln -s //var/lib/hadoopdata/nm-local-dir/usercache/admin/appcache/application_1584673981652_0005/container_e10_1584673981652_0005_01_000002/tmp/pai-root/log/user.pai.stdout /var/lib/yarn/userlogs/application_1584673981652_0005/container_e10_1584673981652_0005_01_000002/user.pai.stdout
+++[04:42:42] ln -s //var/lib/hadoopdata/nm-local-dir/usercache/admin/appcache/application_1584673981652_0005/container_e10_1584673981652_0005_01_000002/tmp/pai-root/log/user.pai.all /var/lib/yarn/userlogs/application_1584673981652_0005/container_e10_1584673981652_0005_01_000002/user.pai.all
+++[04:42:42] ln -s /var/lib/yarn/userlogs/application_1584673981652_0005/container_e10_1584673981652_0005_01_000002/diskCleaner.pai.error //var/lib/hadoopdata/nm-local-dir/usercache/admin/appcache/application_1584673981652_0005/container_e10_1584673981652_0005_01_000002/tmp/pai-root/log/diskCleaner.pai.error
+++[04:42:42] hadoop_config_dir=hadoop_config
+++[04:42:42] mkdir -p hadoop_config
+++[04:42:42] cp -r /hadoop-configuration-for-jobs/capacity-scheduler.xml /hadoop-configuration-for-jobs/configuration.xsl /hadoop-configuration-for-jobs/container-executor.cfg /hadoop-configuration-for-jobs/core-site.xml /hadoop-configuration-for-jobs/hadoop-env.cmd /hadoop-configuration-for-jobs/hadoop-env.sh /hadoop-configuration-for-jobs/hadoop-metrics.properties /hadoop-configuration-for-jobs/hadoop-metrics2.properties /hadoop-configuration-for-jobs/hadoop-policy.xml /hadoop-configuration-for-jobs/hdfs-site.xml /hadoop-configuration-for-jobs/httpfs-env.sh /hadoop-configuration-for-jobs/httpfs-log4j.properties /hadoop-configuration-for-jobs/httpfs-signature.secret /hadoop-configuration-for-jobs/httpfs-site.xml /hadoop-configuration-for-jobs/kms-acls.xml /hadoop-configuration-for-jobs/kms-env.sh /hadoop-configuration-for-jobs/kms-log4j.properties /hadoop-configuration-for-jobs/kms-site.xml /hadoop-configuration-for-jobs/log4j.properties /hadoop-configuration-for-jobs/mapred-env.cmd /hadoop-configuration-for-jobs/mapred-env.sh /hadoop-configuration-for-jobs/mapred-queues.xml.template /hadoop-configuration-for-jobs/mapred-site.xml /hadoop-configuration-for-jobs/mapred-site.xml.template /hadoop-configuration-for-jobs/slaves /hadoop-configuration-for-jobs/ssl-client.xml.example /hadoop-configuration-for-jobs/ssl-server.xml.example /hadoop-configuration-for-jobs/yarn-env.cmd /hadoop-configuration-for-jobs/yarn-env.sh /hadoop-configuration-for-jobs/yarn-site.xml hadoop_config
+++[04:42:42] hadoop_tmp_dir=/var/lib/hadoopdata
++++[04:42:42] cat /proc/self/cgroup
++++[04:42:42] grep memory
++++[04:42:42] awk -F / '{print $NF}'
+++[04:42:42] container_id=fd4dba9e16c14d62c21b007afc64e64032d5dd2af5a35829ad08fddd93a0227b
++++[04:42:42] docker inspect fd4dba9e16c14d62c21b007afc64e64032d5dd2af5a35829ad08fddd93a0227b
++++[04:42:42] jq -r --arg hadoop_tmp_dir /var/lib/hadoopdata '.[] | .Mounts | .[] | select(.Destination==$hadoop_tmp_dir) | .Source'
+++[04:42:42] mounted_path=/data/hadooptmp/nodemanager
+++[04:42:42] container_local_dir=/data/hadooptmp/nodemanager/nm-local-dir/usercache/admin/appcache/application_1584673981652_0005/container_e10_1584673981652_0005_01_000002
+++[04:42:42] docker pull openpai/tensorflow-py36-cu90
++++[04:42:57] hostname
+++[04:42:57] docker run --name admin-just-test_3f34372a-container_e10_1584673981652_0005_01_000002 --init --tty --rm --privileged=false --oom-score-adj=1000 --cap-add=SYS_ADMIN --cap-add=DAC_READ_SEARCH --cap-drop=MKNOD --network=host --cpus=4 --memory=8192m --shm-size=512m --runtime=runc --env NVIDIA_VISIBLE_DEVICES=void --device=/dev/nvidiactl --device=/dev/nvidia-uvm --device=/dev/nvidia0 --device=/dev/fuse --security-opt apparmor:unconfined --volume /data/hadooptmp/nodemanager/nm-local-dir/usercache/admin/appcache/application_1584673981652_0005/container_e10_1584673981652_0005_01_000002/tmp/pai-root/alive:/alive --volume /data/hadooptmp/nodemanager/nm-local-dir/usercache/admin/appcache/application_1584673981652_0005/container_e10_1584673981652_0005_01_000002/tmp/pai-root/alive/yarn_container_e10_1584673981652_0005_01_000002:/alive/yarn_container_e10_1584673981652_0005_01_000002:ro --volume /data/hadooptmp/nodemanager/nm-local-dir/usercache/admin/appcache/application_1584673981652_0005/container_e10_1584673981652_0005_01_000002/tmp/pai-root/log:/pai/log --volume /data/hadooptmp/nodemanager/nm-local-dir/usercache/admin/appcache/application_1584673981652_0005/container_e10_1584673981652_0005_01_000002/tmp/pai-root/bootstrap:/pai/bootstrap:ro --volume /data/hadooptmp/nodemanager/nm-local-dir/usercache/admin/appcache/application_1584673981652_0005/container_e10_1584673981652_0005_01_000002/tmp/pai-root/code:/pai/code:ro --volume /var/drivers/nvidia/current:/usr/local/nvidia:ro --volume /data/hadooptmp/nodemanager/nm-local-dir/usercache/admin/appcache/application_1584673981652_0005/container_e10_1584673981652_0005_01_000002/hadoop_config:/etc/hadoop --volume /data/hadooptmp/nodemanager/nm-local-dir/usercache/admin/appcache/application_1584673981652_0005/container_e10_1584673981652_0005_01_000002/tmp/pai-root/ssh_config:/pai/ssh_config/:ro --label GPU_ID=0 --label PAI_HOSTNAME=ubuntu --label PAI_JOB_NAME=admin~just-test_3f34372a --label PAI_JOB_VC_NAME=default --label PAI_USER_NAME=admin --label PAI_CURRENT_TASK_ROLE_NAME=taskrole --env-file env.list --entrypoint= openpai/tensorflow-py36-cu90 /bin/bash /pai/bootstrap/docker_bootstrap.sh
+++[04:42:59] '[' -f tmp/pai-root/alive/docker_container_e10_1584673981652_0005_01_000002 ']'
++++[04:42:59] docker ps
++++[04:42:59] grep admin-just-test_3f34372a-container_e10_1584673981652_0005_01_000002
+++[04:42:59] '[' '!' '27ba3cee099a        openpai/tensorflow-py36-cu90              "/bin/bash /pai/bo..."    2 seconds ago       Up 1 second                             admin-just-test_3f34372a-container_e10_1584673981652_0005_01_000002' ']'
+++[04:42:59] /bin/true
+++[04:42:59] touch tmp/pai-root/alive/yarn_container_e10_1584673981652_0005_01_000002
+++[04:42:59] sleep 20
++[04:43:19] exit_handler
++[04:43:19] rc=2
++[04:43:19] log_runtime_error INFO USER_EXIT_CODE 2
++[04:43:19] local level=INFO
++[04:43:19] local message_type=USER_EXIT_CODE
++[04:43:19] local error_message=2
+++[04:43:19] date +%s
++[04:43:19] local timestamp=1584679399
++[04:43:19] printf '%s\n' '1584679399 INFO USER_EXIT_CODE 2'
+++[04:43:19] get_received_signal 2
+++[04:43:19] local exit_code=2
+++[04:43:19] local signal=-126
+++[04:43:19] local signal_name=SIG_-126
+++[04:43:19] echo
++[04:43:19] local received_signal=
++[04:43:19] [[ -n '' ]]
++[04:43:19] [[ '' != true ]]
++[04:43:19] [[ '' == \S\I\G\T\E\R\M ]]
++[04:43:19] [[ '' == \S\I\G\K\I\L\L ]]
+++[04:43:19] docker inspect '--format={{.State.Pid}}' admin-just-test_3f34372a-container_e10_1584673981652_0005_01_000002
++[04:43:19] pid=
++[04:43:19] [[ -n '' ]]
++[04:43:19] generate_agg_err
++[04:43:19] printf '[DEBUG] Generate aggregate dynamic error info\n'
++[04:43:19] printf '[PAI_RUNTIME_ERROR_START]\n'
++[04:43:19] generate_error_summary
+++[04:43:19] get_user_exit_code
++++[04:43:19] grep -o 'INFO USER_EXIT_CODE.*' /var/lib/yarn/userlogs/application_1584673981652_0005/container_e10_1584673981652_0005_01_000002/runtime.yarn.pai.error
++++[04:43:19] tail -n 1
++++[04:43:19] grep -o '[0-9]*'
+++[04:43:19] local user_exit_code=2
+++[04:43:19] echo 2
++[04:43:19] local user_exit_code=2
+++[04:43:19] get_received_signal 2
+++[04:43:19] local exit_code=2
+++[04:43:19] local signal=-126
+++[04:43:19] local signal_name=SIG_-126
+++[04:43:19] echo
++[04:43:19] local signal=
++[04:43:19] [[ -f /var/lib/yarn/userlogs/application_1584673981652_0005/container_e10_1584673981652_0005_01_000002/diskCleaner.pai.error ]]
++[04:43:19] [[ -f /var/lib/yarn/userlogs/application_1584673981652_0005/container_e10_1584673981652_0005_01_000002/runtime.docker.pai.error ]]
++[04:43:19] grep 'ERROR REASON' /var/lib/yarn/userlogs/application_1584673981652_0005/container_e10_1584673981652_0005_01_000002/runtime.docker.pai.error
++[04:43:19] grep 'User process exited with code'
++[04:43:19] [[ 0 -eq 0 ]]
++[04:43:19] [[ -z '' ]]
++[04:43:19] write_error_summary 255 originalUserExitCode /var/lib/yarn/userlogs/application_1584673981652_0005/container_e10_1584673981652_0005_01_000002/runtime.docker.pai.error
++[04:43:19] local exit_code=255
++[04:43:19] local trigger=originalUserExitCode
++[04:43:19] local parse_file=/var/lib/yarn/userlogs/application_1584673981652_0005/container_e10_1584673981652_0005_01_000002/runtime.docker.pai.error
++[04:43:19] local docker_status=
++[04:43:19] local caught_signal=
+++[04:43:19] get_user_exit_code
++++[04:43:19] grep -o 'INFO USER_EXIT_CODE.*' /var/lib/yarn/userlogs/application_1584673981652_0005/container_e10_1584673981652_0005_01_000002/runtime.yarn.pai.error
++++[04:43:19] tail -n 1
++++[04:43:19] grep -o '[0-9]*'
+++[04:43:19] local user_exit_code=2
+++[04:43:19] echo 2
++[04:43:19] local user_exit_code=2
++[04:43:19] [[ 255 == '' ]]
++[04:43:19] echo 'exitcode: 255'
++[04:43:19] echo 'trigger: originalUserExitCode'
++[04:43:19] [[ /var/lib/yarn/userlogs/application_1584673981652_0005/container_e10_1584673981652_0005_01_000002/runtime.docker.pai.error != '' ]]
+++[04:43:19] grep 'ERROR REASON' /var/lib/yarn/userlogs/application_1584673981652_0005/container_e10_1584673981652_0005_01_000002/runtime.docker.pai.error
+++[04:43:19] tail -n 1
+++[04:43:19] grep -o '".*"'
+++[04:43:19] sed 's/"//g'
+++[04:43:19] head -c 384
++[04:43:19] local 'reason=User process exited with code: 2'
+++[04:43:19] grep 'ERROR SOLUTION' /var/lib/yarn/userlogs/application_1584673981652_0005/container_e10_1584673981652_0005_01_000002/runtime.docker.pai.error
+++[04:43:19] tail -n 1
+++[04:43:19] grep -o '".*"'
+++[04:43:19] sed 's/"//g'
+++[04:43:19] head -c 384
++[04:43:19] local solution=
++[04:43:19] echo 'reason: |'
++[04:43:19] echo '  User process exited with code: 2'
++[04:43:19] echo 'solution: |'
++[04:43:19] echo '  '
++[04:43:19] echo 'originalUserExitCode: 2'
++[04:43:19] echo 'dockerStatus: '
++[04:43:19] echo 'caughtSignal: '
++[04:43:19] echo caughtException:
++[04:43:19] echo matchedUserLogString:
++[04:43:19] return
++[04:43:19] echo errorLogs:
++[04:43:19] echo '  user: |'
++[04:43:19] [[ -f /var/lib/yarn/userlogs/application_1584673981652_0005/container_e10_1584673981652_0005_01_000002/user.pai.stderr ]]
+++[04:43:19] printf_file_tail_with_shift /var/lib/yarn/userlogs/application_1584673981652_0005/container_e10_1584673981652_0005_01_000002/user.pai.stderr '    ' 2048
+++[04:43:19] local file_name=/var/lib/yarn/userlogs/application_1584673981652_0005/container_e10_1584673981652_0005_01_000002/user.pai.stderr
+++[04:43:19] local 'shift_space=    '
+++[04:43:19] local tail_char_num=2048
+++[04:43:19] [[ 2048 == '' ]]
++++[04:43:19] tail -c 2048 /var/lib/yarn/userlogs/application_1584673981652_0005/container_e10_1584673981652_0005_01_000002/user.pai.stderr
+++[04:43:19] local 'file_content=
+Usage:   
+  pip install [options] <requirement specifier> [package-index-options] ...
+  pip install [options] -r <requirements file> [package-index-options] ...
+  pip install [options] [-e] <vcs project url> ...
+  pip install [options] [-e] <local project path> ...
+  pip install [options] <archive url/path> ...
+
+no such option: --alias'
+++[04:43:19] IFS=
+++[04:43:19] read -r line
++++[04:43:19] printf '%s\n' '
+Usage:   
+  pip install [options] <requirement specifier> [package-index-options] ...
+  pip install [options] -r <requirements file> [package-index-options] ...
+  pip install [options] [-e] <vcs project url> ...
+  pip install [options] [-e] <local project path> ...
+  pip install [options] <archive url/path> ...
+
+no such option: --alias'
++++[04:43:19] echo
++++[04:43:19] sed -e 's/^[[:blank:]]*//'
++++[04:43:19] tr -d '\n\r'
++++[04:43:19] tr -cd '[:print:]'
+++[04:43:19] line=
+++[04:43:19] echo '    '
+++[04:43:19] IFS=
+++[04:43:19] read -r line
++++[04:43:19] echo Usage:
++++[04:43:19] sed -e 's/^[[:blank:]]*//'
++++[04:43:19] tr -d '\n\r'
++++[04:43:19] tr -cd '[:print:]'
+++[04:43:19] line=Usage:
+++[04:43:19] echo '    Usage:'
+++[04:43:19] IFS=
+++[04:43:19] read -r line
++++[04:43:19] sed -e 's/^[[:blank:]]*//'
++++[04:43:19] echo pip install '[options]' '<requirement' 'specifier>' '[package-index-options]' ...
++++[04:43:19] tr -d '\n\r'
++++[04:43:19] tr -cd '[:print:]'
+++[04:43:19] line='pip install [options] <requirement specifier> [package-index-options] ...'
+++[04:43:19] echo '    pip install [options] <requirement specifier> [package-index-options] ...'
+++[04:43:19] IFS=
+++[04:43:19] read -r line
++++[04:43:19] echo pip install '[options]' -r '<requirements' 'file>' '[package-index-options]' ...
++++[04:43:19] sed -e 's/^[[:blank:]]*//'
++++[04:43:19] tr -d '\n\r'
++++[04:43:19] tr -cd '[:print:]'
+++[04:43:19] line='pip install [options] -r <requirements file> [package-index-options] ...'
+++[04:43:19] echo '    pip install [options] -r <requirements file> [package-index-options] ...'
+++[04:43:19] IFS=
+++[04:43:19] read -r line
++++[04:43:19] sed -e 's/^[[:blank:]]*//'
++++[04:43:19] echo pip install '[options]' '[-e]' '<vcs' project 'url>' ...
++++[04:43:19] tr -d '\n\r'
++++[04:43:19] tr -cd '[:print:]'
+++[04:43:19] line='pip install [options] [-e] <vcs project url> ...'
+++[04:43:19] echo '    pip install [options] [-e] <vcs project url> ...'
+++[04:43:19] IFS=
+++[04:43:19] read -r line
++++[04:43:19] echo pip install '[options]' '[-e]' '<local' project 'path>' ...
++++[04:43:19] sed -e 's/^[[:blank:]]*//'
++++[04:43:19] tr -d '\n\r'
++++[04:43:19] tr -cd '[:print:]'
+++[04:43:19] line='pip install [options] [-e] <local project path> ...'
+++[04:43:19] echo '    pip install [options] [-e] <local project path> ...'
+++[04:43:19] IFS=
+++[04:43:19] read -r line
++++[04:43:19] echo pip install '[options]' '<archive' 'url/path>' ...
++++[04:43:19] sed -e 's/^[[:blank:]]*//'
++++[04:43:19] tr -d '\n\r'
++++[04:43:19] tr -cd '[:print:]'
+++[04:43:19] line='pip install [options] <archive url/path> ...'
+++[04:43:19] echo '    pip install [options] <archive url/path> ...'
+++[04:43:19] IFS=
+++[04:43:19] read -r line
++++[04:43:19] echo
++++[04:43:19] sed -e 's/^[[:blank:]]*//'
++++[04:43:19] tr -d '\n\r'
++++[04:43:19] tr -cd '[:print:]'
+++[04:43:19] line=
+++[04:43:19] echo '    '
+++[04:43:19] IFS=
+++[04:43:19] read -r line
++++[04:43:19] echo no such option: --alias
++++[04:43:19] sed -e 's/^[[:blank:]]*//'
++++[04:43:19] tr -d '\n\r'
++++[04:43:19] tr -cd '[:print:]'
+++[04:43:19] line='no such option: --alias'
+++[04:43:19] echo '    no such option: --alias'
+++[04:43:19] IFS=
+++[04:43:19] read -r line
++[04:43:19] printf '%s\n' '    
+    Usage:
+    pip install [options] <requirement specifier> [package-index-options] ...
+    pip install [options] -r <requirements file> [package-index-options] ...
+    pip install [options] [-e] <vcs project url> ...
+    pip install [options] [-e] <local project path> ...
+    pip install [options] <archive url/path> ...
+    
+    no such option: --alias'
++[04:43:19] echo '  runtime: |'
++[04:43:19] [[ -f /var/lib/yarn/userlogs/application_1584673981652_0005/container_e10_1584673981652_0005_01_000002/runtime.docker.pai.error ]]
+++[04:43:19] printf_file_tail_with_shift /var/lib/yarn/userlogs/application_1584673981652_0005/container_e10_1584673981652_0005_01_000002/runtime.docker.pai.error '    ' 896
+++[04:43:19] local file_name=/var/lib/yarn/userlogs/application_1584673981652_0005/container_e10_1584673981652_0005_01_000002/runtime.docker.pai.error
+++[04:43:19] local 'shift_space=    '
+++[04:43:19] local tail_char_num=896
+++[04:43:19] [[ 896 == '' ]]
++++[04:43:19] tail -c 896 /var/lib/yarn/userlogs/application_1584673981652_0005/container_e10_1584673981652_0005_01_000002/runtime.docker.pai.error
+++[04:43:19] local 'file_content=1584679398 ERROR REASON "User process exited with code: 2"'
+++[04:43:19] IFS=
+++[04:43:19] read -r line
++++[04:43:19] printf '%s\n' '1584679398 ERROR REASON "User process exited with code: 2"'
++++[04:43:19] echo 1584679398 ERROR REASON '"User' process exited with code: '2"'
++++[04:43:19] sed -e 's/^[[:blank:]]*//'
++++[04:43:19] tr -d '\n\r'
++++[04:43:19] tr -cd '[:print:]'
+++[04:43:19] line='1584679398 ERROR REASON "User process exited with code: 2"'
+++[04:43:19] echo '    1584679398 ERROR REASON "User process exited with code: 2"'
+++[04:43:19] IFS=
+++[04:43:19] read -r line
++[04:43:19] printf '%s\n' '    1584679398 ERROR REASON "User process exited with code: 2"'
++[04:43:19] [[ -f /var/lib/yarn/userlogs/application_1584673981652_0005/container_e10_1584673981652_0005_01_000002/runtime.yarn.pai.error ]]
+++[04:43:19] printf_file_tail_with_shift /var/lib/yarn/userlogs/application_1584673981652_0005/container_e10_1584673981652_0005_01_000002/runtime.yarn.pai.error '    ' 896
+++[04:43:19] local file_name=/var/lib/yarn/userlogs/application_1584673981652_0005/container_e10_1584673981652_0005_01_000002/runtime.yarn.pai.error
+++[04:43:19] local 'shift_space=    '
+++[04:43:19] local tail_char_num=896
+++[04:43:19] [[ 896 == '' ]]
++++[04:43:19] tail -c 896 /var/lib/yarn/userlogs/application_1584673981652_0005/container_e10_1584673981652_0005_01_000002/runtime.yarn.pai.error
+++[04:43:19] local 'file_content=WARNING: Your kernel does not support swap limit capabilities or the cgroup is not mounted. Memory limited without swap.
+1584679399 INFO USER_EXIT_CODE 2'
+++[04:43:19] IFS=
+++[04:43:19] read -r line
++++[04:43:19] printf '%s\n' 'WARNING: Your kernel does not support swap limit capabilities or the cgroup is not mounted. Memory limited without swap.
+1584679399 INFO USER_EXIT_CODE 2'
++++[04:43:19] echo WARNING: Your kernel does not support swap limit capabilities or the cgroup is not mounted. Memory limited without swap.
++++[04:43:19] sed -e 's/^[[:blank:]]*//'
++++[04:43:19] tr -d '\n\r'
++++[04:43:19] tr -cd '[:print:]'
+++[04:43:19] line='WARNING: Your kernel does not support swap limit capabilities or the cgroup is not mounted. Memory limited without swap.'
+++[04:43:19] echo '    WARNING: Your kernel does not support swap limit capabilities or the cgroup is not mounted. Memory limited without swap.'
+++[04:43:19] IFS=
+++[04:43:19] read -r line
++++[04:43:19] echo 1584679399 INFO USER_EXIT_CODE 2
++++[04:43:19] sed -e 's/^[[:blank:]]*//'
++++[04:43:19] tr -d '\n\r'
++++[04:43:19] tr -cd '[:print:]'
+++[04:43:19] line='1584679399 INFO USER_EXIT_CODE 2'
+++[04:43:19] echo '    1584679399 INFO USER_EXIT_CODE 2'
+++[04:43:19] IFS=
+++[04:43:19] read -r line
++[04:43:19] printf '%s\n' '    WARNING: Your kernel does not support swap limit capabilities or the cgroup is not mounted. Memory limited without swap.
+    1584679399 INFO USER_EXIT_CODE 2'
++[04:43:19] echo '  diskCleaner: |'
++[04:43:19] [[ -f /var/lib/yarn/userlogs/application_1584673981652_0005/container_e10_1584673981652_0005_01_000002/diskCleaner.pai.error ]]
++[04:43:19] printf '[PAI_RUNTIME_ERROR_END]\n'
+++[04:43:19] grep exitcode: /var/lib/yarn/userlogs/application_1584673981652_0005/container_e10_1584673981652_0005_01_000002/runtime.pai.agg.error
+++[04:43:19] tail -n 1
+++[04:43:19] grep -o '[0-9]*'
++[04:43:19] rc=255
++[04:43:19] [[ 255 -eq '' ]]
++[04:43:19] printf '[DEBUG] Write exit code 255 to file /var/lib/hadoopdata/nm-local-dir/nmPrivate/application_1584673981652_0005/container_e10_1584673981652_0005_01_000002/container_e10_1584673981652_0005_01_000002.pid.exitcode.\n'
++[04:43:19] echo 255
++[04:43:19] exit 255
+ib/hadoopdata/nm-local-dir/nmPrivate/application_1584673981652_0005/container_e10_1584673981652_0005_01_000002/container_e10_1584673981652_0005_01_000002.pid.exitcode.
